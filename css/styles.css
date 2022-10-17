@@ -704,7 +704,7 @@ ul {
 
 .examples-link:hover .overlay,
 .examples-link:focus .overlay {
-  transform: translateX(0);
+  transform: translateY(0);
 }
 
 .examples-content {
