@@ -345,7 +345,7 @@ ul {
   bottom: 0;
   left: 0;
 
-  width: 370px;
+  width: 100%;
   height: 70px;
   font-weight: 700;
   font-size: 14px;
@@ -420,8 +420,7 @@ ul {
   fill: #afb1b8;
   height: 20px;
   width: 20px;
-  transition: background-color var(--transition-dur-and-tim),
-    fill var(--transition-dur-and-tim);
+  transition: fill var(--transition-dur-and-tim);
 }
 
 .social-link:hover,
@@ -432,7 +431,6 @@ ul {
 .social-link:hover .social-link-icon,
 .social-link:focus .social-link-icon {
   fill: var(--primary-background-color);
-  background-color: var(--accent-color);
 }
 
 /* Clients */
@@ -456,6 +454,8 @@ ul {
   height: 100%;
   border: 1px solid #afb1b8;
   border-radius: 4px;
+
+  transition: border-color var(--transition-dur-and-tim);
 }
 
 .clients-link-icon {
@@ -464,6 +464,10 @@ ul {
   fill: #afb1b8;
 
   transition: fill var(--transition-dur-and-tim);
+}
+
+.clients-link:hover {
+  border-color: var(--accent-color);
 }
 
 .clients-link:hover .clients-link-icon,
@@ -556,13 +560,13 @@ ul {
   z-index: 1000;
   width: 100%;
   height: 100%;
-  padding-bottom: 20px;
 
   background-color: rgba(0, 0, 0, 0.2);
 
   opacity: 1;
 
-  transition: opacity var(--transition-dur-and-tim);
+  transition: opacity var(--transition-dur-and-tim),
+    visibility var(--transition-dur-and-tim);
 }
 
 .backdrop.is-hidden {
@@ -650,7 +654,8 @@ ul {
   letter-spacing: 0.03em;
 
   transition: background-color var(--transition-dur-and-tim),
-    color var(--transition-dur-and-tim);
+    color var(--transition-dur-and-tim),
+    box-shadow var(--transition-dur-and-tim);
 }
 
 .filter-button:hover,
@@ -673,6 +678,10 @@ ul {
 .examples-item {
   display: flex;
   flex-basis: calc((100% - 60px) / 3);
+}
+
+.examples-link {
+  transition: box-shadow var(--transition-dur-and-tim);
 }
 
 .examples-link:hover,
